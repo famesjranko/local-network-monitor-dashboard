@@ -29,7 +29,7 @@ app = dash.Dash(__name__)
 server = app.server  # Expose the Flask server for caching
 
 # Configure caching with Redis using environment variables for security
-REDIS_URL = os.environ.get('REDIS_URL', 'redis://localhost:6379/0')  # Set this in your environment
+REDIS_URL = os.environ.get('REDIS_URL', 'redis://localhost:6379/0')  # can set this in your environment
 
 cache = Cache(app.server, config={
     'CACHE_TYPE': 'redis',
