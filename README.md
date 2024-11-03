@@ -13,7 +13,7 @@ This project monitors internet connectivity by pinging multiple targets, logs th
 
 ## Dash Web App Interface
 
-![Dash Web App Screenshot](screenshots/Dash.png)
+![Dash Web App Screenshot](screenshots/dashboard.png)
 
 ---
 
