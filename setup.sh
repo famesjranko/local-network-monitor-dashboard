@@ -1,5 +1,8 @@
 #!/bin/
 
+# Exit immediately if a command exits with a non-zero status
+set -e
+
 # Set the desired maximum memory for Redis
 REDIS_MAX_MEMORY="256mb" 
 
@@ -32,10 +35,11 @@ sed -i "s/device_name = .*/device_name = \"$TAPO_DEVICE_NAME\"/" $PROJECT_DIR/po
 mkdir -p "$LOGS_DIR"
 
 # Create necessary log files if they don't exist
-touch "$LOGS_DIR/internet_status.db"
 touch "$LOGS_DIR/failure_count.txt"
 touch "$LOGS_DIR/check_internet.log"
 touch "$LOGS_DIR/cooldown.txt"
+touch "$LOGS_DIR/failure_count.txt"
+touch "$LOGS_DIR/dashboard.log"
 
 # Set up Python virtual environment and install dependencies
 python3 -m venv "$VENV_DIR"
@@ -66,6 +70,9 @@ else
     echo "Redis is not running correctly. Please check the Redis installation."
     exit 1
 fi
+
+# Run check_internet.sh to initialize the database and log initial data
+/bin/bash $PROJECT_DIR/check_internet.sh
 
 # Create systemd service and timer files for check_internet
 sudo bash -c "cat > $SYSTEMD_DIR/check_internet.service" <<EOL
