@@ -37,7 +37,7 @@ internet-monitoring/
 
 ### 1. Clone the repo:
 ```bash
-git clone https://github.com/famesjranko/internet-monitoring.git
+git clone https://github.com/famesjranko/local-network-monitor-dashboard.git
 cd internet-monitoring
 ```
 
@@ -71,7 +71,7 @@ And navigate to `http://<your-server-ip>:8050` in a browser to access the dashbo
 First, clone this repository and navigate to the directory:
 
 ```bash
-git clone https://github.com/famesjranko/internet-monitoring.git
+git clone https://github.com/famesjranko/local-network-monitor-dashboard.git
 cd internet-monitoring
 ```
 
