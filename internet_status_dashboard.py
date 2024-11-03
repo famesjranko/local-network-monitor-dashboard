@@ -12,9 +12,17 @@ import sys
 import logging
 import socket
 
+SCRIPT_DIR = os.path.dirname(os.path.realpath(sys.argv[0])) 
+
 # Configure logging
 logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+
+# Set up logging configuration
+logging.basicConfig(
+    filename=os.path.join(SCRIPT_DIR, 'logs/dashboard.log'),
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 # Initialize the Dash app
 app = dash.Dash(__name__)
