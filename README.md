@@ -9,7 +9,7 @@ This project monitors internet connectivity by pinging multiple targets, logs th
 - **Dash Dashboard**: A web interface to visualize internet status logs using Dash, showing connectivity success rate, latency, and packet loss over time.
 - **Redis Caching**: Used in the Dash app for performance optimization.
 - **Cooldown Logic**: Ensures the power cycle isn’t retriggered within a specified cooldown period (10 minutes).
-
+- **Tapo p100 Smart Plug**: Utilises [Tapo Smart Plug](https://www.tapo.com/au/product/smart-plug/tapo-p100/) for power cycling modem.
 
 ## Dash Web App Interface
 
