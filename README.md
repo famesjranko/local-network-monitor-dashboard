@@ -38,7 +38,7 @@ internet-monitoring/
 ### 1. Clone the repo:
 ```bash
 git clone https://github.com/famesjranko/local-network-monitor-dashboard.git
-cd internet-monitoring
+cd local-network-monitor-dashboard
 ```
 
 ### 2. Run the Setup Script:
@@ -72,7 +72,7 @@ First, clone this repository and navigate to the directory:
 
 ```bash
 git clone https://github.com/famesjranko/local-network-monitor-dashboard.git
-cd internet-monitoring
+cd local-network-monitor-dashboard
 ```
 
 #### a. Python Virtual Environment
