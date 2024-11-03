@@ -51,6 +51,7 @@ This script will:
  - Create necessary directories.
  - Move relevant files into the project directory.
  - Set up a Python virtual environment and install dependencies.
+ - Injects tapo p100 credentials `email`, `password`, `device_ip`, `device_name` into scripts (via user input)
  - Install and configure Redis (can set cache size max in script)
  - Create and enable systemd service and timer files for the internet check and Dash app.
 
@@ -60,6 +61,8 @@ Check the status of the services to ensure they are running correctly:
 sudo systemctl status check_internet.timer
 sudo systemctl status dash_app.service
 ```
+
+And navigate to `http://<your-server-ip>:8050` in a browser to access the dashboard.
 
 ## Manual Setup 
 
