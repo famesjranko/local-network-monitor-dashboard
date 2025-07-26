@@ -51,7 +51,7 @@ deactivate
 if ! command -v redis-server &> /dev/null
 then
     sudo apt-get update
-    sudo apt-get install -y redis-server
+    sudo apt-get install -y redis-server sqlite3
     sudo systemctl start redis-server
     sudo systemctl enable redis-server
 
