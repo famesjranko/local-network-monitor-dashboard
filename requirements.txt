@@ -1,5 +1,4 @@
 dash
 flask-caching
 pandas
-sqlite3
 redis
